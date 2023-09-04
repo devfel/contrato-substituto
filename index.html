@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <img
+      src="https://i.postimg.cc/qBKC9F44/logo-UFSJ.jpg"
+      alt="Logo"
+      id="logoImage"
+    />
+    <div id="content">
+      <h1>Universidade Federal de São João del Rei</h1>
+      <p>This is the initial paragraph for a test development.</p>
+      <p>
+        This is the second paragraph for a test with the selected option:
+        <select id="optionSelect" class="hide-for-pdf">
+          <option value="One">Option A</option>
+          <option value="Two">Option B</option>
+          <option value="Three">Option C</option>
+        </select>
+        <span id="displayedOption">Option A</span>.
+      </p>
+      <p>
+        Third paragraph is here, with the entered text:
+        <input type="text" id="textField" class="hide-for-pdf" />
+        <span id="textFieldValue">[Texto]</span>, this is a paragraph for test
+        as well.
+      </p>
+      <p id="dynamicParagraph">
+        User selected <span id="selectedValue">one</span>.
+      </p>
+    </div>
+
+    <button id="generatePDF">Generate PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
